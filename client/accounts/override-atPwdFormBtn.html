@@ -1,0 +1,76 @@
+<!-- here we override the login form
+so that i can put here my own style -->
+
+<template name="override-atPwdFormBtn">
+  <button type="submit" class="submit {{submitDisabled}}" id="signin-btn-id">
+    {{buttonText}}
+  </button>
+</template>
+
+<template name="override-atTitle">
+  <div class="signin-title">
+    <h3>{{title}}</h3>
+  </div>
+</template>
+
+<template name="override-atPwdForm">
+  <div class="override-form">
+    <form role="form" id="at-pwd-form" class="{{disabled}}" novalidate action="#" method="POST">
+      {{#each fields}}
+        {{> atInput}}
+      {{/each}}
+      {{#if showReCaptcha}}
+        {{> atReCaptcha}}
+      {{/if}}
+      {{#if showForgotPasswordLink}}
+        {{> atPwdLink}}
+      {{/if}}
+      {{> atPwdFormBtn}}
+    </form>
+  </div>
+</template>
+
+<template name="override-atTextInput">
+  <div class="override-at-input {{#if isValidating}}validating{{/if}} {{#if hasError}}has-error{{/if}} {{#if hasSuccess}}has-success{{/if}} {{#if feedback}}has-feedback{{/if}}">
+    {{#if showLabels}}
+      <label for="at-field-{{_id}}" class="label-class">
+        {{displayName}} {{#unless required}}{{optionalText}}{{/unless}}
+      </label>
+    {{/if}}
+    <input type="{{type}}" id="at-field-{{_id}}" class="input-class" name="at-field-{{_id}}" placeholder="{{placeholder}}" autocapitalize="none" autocorrect="off">
+    {{#if hasIcon}}
+        <span class="{{iconClass}}"></span>
+    {{/if}}
+    {{#if hasError}}
+      <span style="color:red;">{{errorText}}</span>
+    {{/if}}
+  </div>
+</template>
+
+<template name="override-atSignupLink">
+  <div class="at-signup-link">
+    <p class="signup-link-class">
+      {{preText}}
+      <a href="{{signUpLink}}" id="at-signUp" class="at-link at-signup {{disabled}}">{{linkText}}</a>
+      {{suffText}}
+    </p>
+  </div>
+</template>
+
+<template name="override-atError">
+  <div class="at-error">
+    {{#each error}}
+      <p id="err-id">{{errorText}}</p>
+    {{/each}}
+  </div>
+</template>
+
+<template name="override-atSigninLink">
+  <div class="at-signin-link">
+    <p class="signup-link-class">
+      {{preText}}
+      <a href="{{signInLink}}" id="at-signIn" class="at-link at-signin {{disabled}}">{{linkText}}</a>
+      {{suffText}}
+    </p>
+  </div>
+</template>

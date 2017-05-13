@@ -1,0 +1,26 @@
+<!-- my intry point -->
+
+<head>
+  <title>MeteorLoginSystemDemo</title>
+</head>
+
+<body style="">
+
+  <h1 class="title">Welcome to Meteor!</h1>
+
+  <div class="form-div">
+    {{> loginModal}}
+  </div>
+
+  <div class="home-page">
+    {{#if currentUser}}
+      <h2>Welcome Home ...</h2>
+      {{#if isInRole "admin"}}
+        <h1>Your Are Admin</h1>
+      {{/if}}
+      <a class="logout">Logout</a>
+    {{/if}}
+  </div>
+
+
+</body>

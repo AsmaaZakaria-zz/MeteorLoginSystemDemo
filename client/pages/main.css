@@ -1,0 +1,85 @@
+/* CSS declarations go here */
+
+
+.title{
+    text-align: center;
+    color: red;
+    font-family: serif;
+}
+
+.form-div{
+  margin-top: 100px;
+  width: 500px;
+  margin-left: 600px;
+}
+
+.signin-title{
+  color: coral;
+  margin-left: 55px;
+}
+
+.label-class{
+  font-size: 25px;
+  color: black;
+}
+
+.input-class{
+  border-radius: 5px;
+  padding: 5px;
+  border-color: coral;
+  margin-left: 100px;
+}
+
+#signin-btn-id{
+  background-color: beige;
+  width: 100px;
+  height: 30px;
+  margin-left: 120px;
+  margin-top: 30px;
+}
+
+.override-form{
+  margin-left: -70px;
+}
+
+.signup-link-class{
+  font-size: 20px;
+  margin-left: -7px;
+}
+
+#at-signUp-id{
+  color: red;
+}
+
+#at-field-password{
+  margin-left: 64px;
+}
+
+#err-id{
+  color: red;
+  margin-left: 27px;
+  font-size: 20px;
+}
+
+#at-field-fristName{
+  margin-left: 0px;
+}
+
+.override-at-input{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.home-page{
+  margin-left: 495px;
+}
+
+.home-page h2{
+  color: blue;
+  font-size: 50px;
+}
+
+.logout{
+  font-size: 20px;
+    margin-left: 155px;
+}
